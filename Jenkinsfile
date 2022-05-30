@@ -1,11 +1,11 @@
 pipeline {
-        agent {label 'Jenkins_Slave_1'}
+        agent {label 'Slave'}
 
     stages {
 
         stage ("Getting Souce Code From Git") {
             steps {
-                git 'https://github.com/saikirangude/Git-repo2.git'
+                git branch: 'develop', url: 'https://github.com/saikirangude/Git-repo2.git'
             }
         }
 //         stage ("SonarQube analysis") {
